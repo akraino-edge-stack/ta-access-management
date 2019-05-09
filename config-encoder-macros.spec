@@ -12,13 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+%global sha 624ed05b65743a82bcfdef525176e6cfef5c71ee
+
 Name:           config-encoder-macros
 Version:        master.624ed05
 Release:        1%{?dist}
 Summary:        Helper macros for encoding config files
 License:        MIT
 URL:            https://github.com/picotrading/config-encoder-macros
-Source0:        http://purkki.dynamic.nsn-net.net/sources/github/picotrading/config-encoder-macros/config-encoder-macros-master.624ed05.tgz
+Source0:        https://github.com/picotrading/%{name}/archive/%{sha}.zip
 Vendor:         Jiri Tyr
 BuildArch:      noarch
 
@@ -28,7 +30,7 @@ BuildArch:      noarch
 Set of Jinja2 and ERB macros which help to encode Python and Ruby data structure into a different file format
 
 %prep
-%autosetup
+%autosetup -n %{name}-%{sha} -p 1
 
 %build
 
