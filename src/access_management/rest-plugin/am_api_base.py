@@ -76,7 +76,7 @@ class AMApiBase(RestResource):
     @staticmethod
     def embed_data(data, code=0, desc=""):
         """
-        Embeds the data into the NCIR Restfulframework preferred format.
+        Embeds the data into the YARF preferred format.
         :param data: The data to encapsulate, it should be a dictionary
         :param code: The error code, it should be 0 on success. (Default: 0)
         :param desc: The description of the error, if no error happened it can be an empty string.
